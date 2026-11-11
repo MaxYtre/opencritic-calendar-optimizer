@@ -20,9 +20,9 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.9'
+        python-version: '3.12'
     
     - name: Install dependencies
       run: |
@@ -69,5 +69,5 @@ jobs:
           echo "Количество событий: $(grep -c 'BEGIN:VEVENT' opencritic-calendar-filtered.ics || echo '0')"
           echo ""
           echo "🔗 Ссылка для подключения к Google Calendar:"
-          echo "https://maxytre.github.io/opencritic-calendar-fixed/opencritic-calendar-filtered.ics"
+          echo "https://maxytre.github.io/opencritic-calendar-optimizer/opencritic-calendar-filtered.ics"
         fi

@@ -10,6 +10,11 @@ import re
 from datetime import datetime, timedelta
 from typing import List, Tuple
 import os
+import sys
+
+# Обеспечиваем корректный вывод UTF-8 в консоли на всех платформах (включая Windows)
+if sys.stdout and hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # Настройки временного диапазона
 MONTHS_BEFORE = 2  # Месяцев назад от сегодня
